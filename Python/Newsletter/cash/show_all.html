@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+
+      <h3>
+         <a href = "{{ url_for('show_all') }}">Admin post</a>
+      </h3>
+      <a href = "{{ url_for('logout') }}">Deconnexion</a>
+      <hr/>
+      <h3>Users (<a href = "{{ url_for('new') }}">Add User
+         </a>)</h3>
+
+      <table>
+         <thead>
+            <tr>
+               <th>Email</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for user in users %}
+               <tr>
+                  <td>{{ user.email }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+
+   <button><a href = "{{ url_for('email') }}">Envoyez un mail</a></button>
+
+   </body>
+
+</html>

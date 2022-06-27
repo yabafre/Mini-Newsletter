@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="X-UA-Compatible" content="text/html">
+</head>
+   <body>
+
+      <h3>Add user</h3>
+      <a href = "{{ url_for('logout') }}">Deconnexion</a>
+      <hr/>
+
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "email" >Email</label> <br>
+         <input type = "email" name = "email" placeholder = "email" /><br>
+         <input type = "submit" value = "Submit" />
+      </form>
+      <button><a href = "{{ url_for('show_all') }}">Home</a></button>
+   </body>
+</html>
